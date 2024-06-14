@@ -1,6 +1,6 @@
 //this file contains functions exposed to the user
 //exports a class that contains methods to do stuff
-//same stuff as index but in a class and callable
+
 
 
 

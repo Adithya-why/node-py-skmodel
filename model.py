@@ -12,11 +12,7 @@ import argparse
 import json
 
 
-# x = pd.DataFrame({0: [1.944941], 1: [1.229823]})
 
-
-
-# print("IN PY")
 
 
 #get data from cli and create dataframe
@@ -41,7 +37,7 @@ names = data.names.split(",")
 #only one ../ for testing since not inside node_modules
 #two ../../ for prod as npm package inside node_modules
 modelpath = os.path.join('../','../', data.modelpath)
-# print(modelpath)
+
 with open(modelpath,"rb") as file:
     model = pickle.load(file)
 
@@ -54,7 +50,7 @@ for name in names:
 
 #get all args with proper name and data
 data = parser.parse_args()
-# print(data)
+
 
 
 
@@ -63,11 +59,10 @@ data = parser.parse_args()
 #vars used to conver namespace object data to dict to traverse
 dataDict = {}
 temp = vars(data)
-# print(temp)
 
 
-# for name in names:
-#     dataDict[name] = [temp[name]]
+
+
 #buils dict for df from parsed data 
 
 #if array of vals given for a feature
@@ -79,7 +74,7 @@ for name in names:
     feature = feature.split(",")
     dataDict[name] = feature
 
-# print(dataDict)
+
 
 
 #make df from dict

@@ -132,7 +132,7 @@ main();
 **Regression**
 
 ```js
-/
+
 const PyModel = require("node-py-skmodel");
 
 
