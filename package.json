@@ -1,0 +1,23 @@
+{
+  "name": "node-py-skmodel",
+  "version": "1.0.0",
+  "description": "use sklearn models in node ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adithya-why/node-py-skmodel.git"
+  },
+  "keywords": [
+    "python",
+    "sklearn"
+  ],
+  "author": "Adi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adithya-why/node-py-skmodel/issues"
+  },
+  "homepage": "https://github.com/Adithya-why/node-py-skmodel#readme"
+}
