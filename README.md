@@ -1,6 +1,32 @@
 # node-py-skmodel
 
-NPM package to get predictions from scikit-learn models(.pkl files) in node js. Requires python in PATH with pandas installed. This is intended for testing and development purposes only since it uses __child_process__
+node-py-skmodel is a NPM package to get predictions from scikit-learn models(.pkl files) in node js. Requires python in PATH with pandas installed. This is intended for testing and development purposes only since it uses __child_process__
+
+# Requirements
+
+## Software requirements
+
+- Python is installed 
+- Python command is accessible through terminal (Added to PATH)
+- Pandas library is installed 
+
+## Files required
+
+* .pkl file of the scikit-learn model to be used
+
+The model needs to be packaged into a pickle file(.pkl) to be loaded into the program. This can be done using the pickle model in **python** after training and testing the model
+
+```py
+import pickle
+
+with open("modelName.pkl","wb") as file:
+    pickle.dump(model,file)
+
+#model is a scikit-learn model object that has been fitted
+#the file will be saved in the same directory as this py script
+
+```
+
 
 # Installation
 
@@ -37,7 +63,8 @@ const model = new PyModel("./models/mymodelname.pkl");
 
 ### Prepare data 
 
-The input data to the model must be passed as a Javascript ```Map()``` Object. Every key in the ```Map()``` must correspond to a the name of a feature and the value should be an array of values for that feature for every row
+The input data to the model must be passed as a Javascript ```Map()``` Object. Every key in the ```Map()``` must correspond to the name of a feature and the value should be an array of values for that feature for every row
+
 
 ```js
 let data = new Map([
@@ -58,13 +85,15 @@ console.log(data)
 */
 ```
 
+The feature names given to the map must match the feature names and order with which the model was trained
+
 ### Get predictions
 
 To get a prediction from the model, call the ```predict()``` method with the data in the above format.
 
 **Note: The ```predict()``` method is asynchronous and returns a promise**
 
-The predictions are retured in the JSON format and need to per parsed with ```JSON.parse()``` 
+The predictions are retured in the JSON format and needs to be parsed with ```JSON.parse()``` 
 
 ```js
 let res = await model.predict(data);
