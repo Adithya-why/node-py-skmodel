@@ -1,6 +1,6 @@
 # node-py-skmodel
 
-NPM package to get predictions from scikit-learn models(.pkl files) in node js. Requires python in PATH with pandas installed.
+NPM package to get predictions from scikit-learn models(.pkl files) in node js. Requires python in PATH with pandas installed. This is intended for testing and development purposes only since it uses __child_process__
 
 # Installation
 
