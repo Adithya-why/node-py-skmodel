@@ -1,6 +1,6 @@
 {
   "name": "node-py-skmodel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "use sklearn models in node ",
   "main": "index.js",
   "scripts": {
